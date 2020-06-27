@@ -1,0 +1,76 @@
+.cardWrapper{
+ height: 600px;
+ width: 1000px;
+ background-color: blueviolet;
+margin: 0 auto;
+}
+
+
+
+/* HEADER */
+
+.cardHeader{
+  margin-bottom: 85px;
+  background-color: burlywood;
+  height: 50px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.cardHeaderColOne{
+  padding: 10px;
+background-color: lightcoral;
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+}
+
+.cardHeaderColTwo{
+  background-color: rgb(73, 152, 133);
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+}
+
+.cardHeaderColThree{
+  background-color: limegreen;
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+}
+
+.cardHeaderThumbNail {
+  height: 100px;
+}
+
+/* BODY */
+
+.cardBody{
+
+  background-color: rgb(205, 203, 163);
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.cardBodyColOne {
+  background-color: rgb(139, 112, 164);
+}
+
+.cardBodyColTwo {
+ background-color: red;
+}
+
+.embeddedVideoPlayer {
+  width: 500px;
+  margin-top: 50px;
+}
+
+
+
+/* FOOTER */
+
+.cardFooter{
+  /* margin-top: 30; */
+  background-color: lavender;
+  height:70px;
+}
+
+.footerText {
+ margin-top: 0;
+ margin-Bottom: 0,
+}

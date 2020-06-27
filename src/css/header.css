@@ -1,0 +1,29 @@
+.headerWrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  /* border-bottom: 1px solid black; */
+  height: 300px,
+}
+
+.headerText {
+  margin: 0
+}
+
+.headerTextWrapper{
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.searchBarWrapper{
+
+  display: block;
+  margin : 0 auto;
+  font-size: 30px;
+  text-align: center;
+}
+
+.searchBarInput{
+  width: 200;
+  border-radius: 30;
+}
