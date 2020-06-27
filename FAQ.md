@@ -39,8 +39,6 @@ There are a few similar projects that already exist:
 - https://policeabuses.info/#/
 - https://filepolicereport.com/
 
-So what is the point of doing something like this again?
-
 None of the above listed projects specifically track police violence videos in an easy to search and categorizde format that also has high a high SEO ranking.  In order for a tool to be utilized by the people, they need to know that it exists and it needs to be easy to use.  The purpose of this project is to fulfil both of those objectives.
 
 ## What are the long-term goals?
