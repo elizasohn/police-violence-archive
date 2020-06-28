@@ -51,16 +51,26 @@ const Card = ( ) => {
         <div className="cardBodyColOne">
           <TwitterTweetEmbed
             tweetId={POSTS[0].tweetURL.split("/")[5]}
+            sourceType="profile"
+            screenName="HeyMarkKop"
+            cards="hidden"
           ></TwitterTweetEmbed>
         </div>
 
         <div className="cardBodyColTwo">
-          <ReactPlayer className="reactPlayer" url={POSTS[0].youTube} />
+          <ReactPlayer
+            className="reactPlayer"
+            url={POSTS[0].youTube}
+            style={{ marginLeft: "10px", marginTop: "10px" }}
+
+            // light={true}
+          />
         </div>
       </div>
 
       <div className="cardFooter">
         {" "}
+       
         <h5 className="footerText">Card Footer</h5>
       </div>
     </div>

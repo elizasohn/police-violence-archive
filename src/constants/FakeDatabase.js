@@ -1,6 +1,20 @@
 export const FAKE_DATABASE = {
          posts: [
            {
+             tgdNumber: 0.001,
+             city: "New York City	",
+             state: "New York",
+             tweetURL:
+               "https://twitter.com/greg_doucette/status/1267122975830151169",
+             fileName: "Greg Doucette #NA - New York NY.mp4",
+             youTube:
+               "https://www.youtube.com/watch?v=nMWpZIdPiTI&feature=youtu.be",
+             text:
+               "NYPD officer (white shirt, higher rank of some sort) pushes a barricade into protestors, eventually knocks it over because he's a moron, then climbs over it so he can rush into the crowd to beat an unarmed woman	",
+             twitterDate: "200604",
+             twitterTime: "5:39:00 PM	",
+           },
+           {
              tgdNumber: 0.01,
              city: "Portland",
              state: "Oregon",
