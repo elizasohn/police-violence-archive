@@ -1,31 +1,67 @@
 import React from "react";
 import card from "../css/card.css";
 import cop from "../media/cop.jpg";
-import cop2 from "../media/cop2.jpg";
 import ReactPlayer from "react-player";
 import { FAKE_DATABASE } from "../constants/FakeDatabase.js";
 import {
-  TwitterTimelineEmbed,
-  TwitterShareButton,
-  TwitterFollowButton,
-  TwitterHashtagButton,
-  TwitterMentionButton,
   TwitterTweetEmbed,
-  TwitterMomentShare,
-  TwitterDMButton,
-  TwitterVideoEmbed,
-  TwitterOnAirButton,
 } from "react-twitter-embed";
-import { withInheritedProps } from "object-path";
 
+const Card = () => {
 
+const POSTS = FAKE_DATABASE.posts;
 
+let weirdTwitterDate = POSTS[0].twitterDate;
+let year = null;
+let month = null;
+let day = null;
+let actualDate = null;
 
-const Card = ( ) => {
+ const makeTwitterDateReadable = (twitterDate) => {
+   twitterDate = twitterDate.match(/.{1,2}/g);
+   year = "20" + twitterDate[0]
+   day = twitterDate[2]
 
-  const POSTS = FAKE_DATABASE.posts;
-  console.log("POSTS", POSTS[0].tweetURL);
+    if (twitterDate[1] === "01") {
+    month = "January"
+    }
+    if (twitterDate[1] === "02") {
+    month = "Febuary";
+    }
+    if (twitterDate[1] === "03") {
+    month = "March";
+    }
+    if (twitterDate[1] === "04") {
+    month = "April";
+    }
+    if (twitterDate[1] === "05") {
+    month = "May";
+    }
+    if (twitterDate[1] === "06") {
+    month = "June";
+    }
+    if (twitterDate[1] === "07") {
+      month = "January";
+    }
+    if (twitterDate[1] === "08") {
+      month = "Febuary";
+    }
+    if (twitterDate[1] === "09") {
+      month = "March";
+    }
+    if (twitterDate[1] === "10") {
+      month = "April";
+    }
+    if (twitterDate[1] === "11") {
+      month = "May";
+    }
+    if (twitterDate[1] === "12") {
+      month = "June";
+    }
+    actualDate = month + " " + day + ", " + year;
+ }
 
+ makeTwitterDateReadable(weirdTwitterDate);
 
   return (
     <div className="cardWrapper">
@@ -35,7 +71,7 @@ const Card = ( ) => {
         </div>
 
         <div className="cardHeaderColTwo">
-          <h5>Date: {POSTS[0].twitterDate}</h5>
+          <h5>Date: {actualDate}</h5>
           <h5>Time: {POSTS[0].twitterTime}</h5>
           <h5>
             Location: {POSTS[0].city} , {POSTS[0].state}
@@ -48,12 +84,16 @@ const Card = ( ) => {
       </div>
 
       <div className="cardBody">
+        
         <div className="cardBodyColOne">
           <TwitterTweetEmbed
             tweetId={POSTS[0].tweetURL.split("/")[5]}
             sourceType="profile"
             screenName="HeyMarkKop"
-            cards="hidden"
+            options={{
+              width: "100%",
+              height: "100%",
+            }}
           ></TwitterTweetEmbed>
         </div>
 
@@ -62,15 +102,12 @@ const Card = ( ) => {
             className="reactPlayer"
             url={POSTS[0].youTube}
             style={{ marginLeft: "10px", marginTop: "10px" }}
-
-            // light={true}
           />
         </div>
       </div>
 
       <div className="cardFooter">
         {" "}
-       
         <h5 className="footerText">Card Footer</h5>
       </div>
     </div>
